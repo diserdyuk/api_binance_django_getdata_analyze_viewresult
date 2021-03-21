@@ -20,3 +20,51 @@
 Результат
 
 ![alt tag](https://i.imgur.com/qzk2Tgv.png)
+
+
+Для запуска проекта
+
+
+зарегистрироваться на binance и создать api
+binance.com
+
+
+установить виртуальное окружение
+$ virtualenv venv
+
+
+запустить venv
+$ source venv/bin/activate
+
+
+установить django
+pip install django
+
+
+сделать миграции
+$ python manage.py makemigrations
+$ python manage.py migrate
+
+
+создать суперюзера
+$ python manage.py createsuperuser
+
+
+запусить локальный сервер
+$ python manage.py runserver
+
+
+перейти в админку 
+http://127.0.0.1:8000/admin
+
+
+в админке создать два значения в поле Config
+size_pozition
+percent_deviation
+
+
+запустить торговый скрипт
+
+
+перейти в браузер
+http://127.0.0.1:8000/
