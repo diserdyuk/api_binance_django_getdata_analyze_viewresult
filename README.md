@@ -30,36 +30,46 @@ binance.com
 
 
 установить виртуальное окружение
+
 $ virtualenv venv
 
 
 запустить venv
+
 $ source venv/bin/activate
 
 
 установить django
+
 pip install django
 
 
 сделать миграции
+
 $ python manage.py makemigrations
+
 $ python manage.py migrate
 
 
 создать суперюзера
+
 $ python manage.py createsuperuser
 
 
 запусить локальный сервер
+
 $ python manage.py runserver
 
 
 перейти в админку 
+
 http://127.0.0.1:8000/admin
 
 
 в админке создать два значения в поле Config
+
 size_pozition
+
 percent_deviation
 
 
@@ -67,4 +77,5 @@ percent_deviation
 
 
 перейти в браузер
+
 http://127.0.0.1:8000/
