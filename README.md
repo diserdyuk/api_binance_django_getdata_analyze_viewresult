@@ -25,57 +25,59 @@
 Для запуска проекта
 
 
-зарегистрироваться на binance и создать api
+1) зарегистрироваться на binance и создать api
 binance.com
 
 
-установить виртуальное окружение
+2) установить виртуальное окружение
 
 $ virtualenv venv
 
 
-запустить venv
+3) запустить venv
 
 $ source venv/bin/activate
 
 
-установить django
+4) установить django
 
 pip install django
 
 
-сделать миграции
+5) сделать миграции
 
 $ python manage.py makemigrations
 
 $ python manage.py migrate
 
 
-создать суперюзера
+6) создать суперюзера
 
 $ python manage.py createsuperuser
 
 
-запусить локальный сервер
+7) запусить локальный сервер
 
 $ python manage.py runserver
 
 
-перейти в админку 
+8) перейти в админку 
 
 http://127.0.0.1:8000/admin
 
 
-в админке создать два значения в поле Config
+9) в админке создать два значения в поле Config
 
 size_pozition
 
 percent_deviation
 
 
-запустить торговый скрипт
+10) запустить торговый скрипт
+
+файл trade_btcusdt_on_binance.py
 
 
-перейти в браузер
+11) перейти в браузер
 
 http://127.0.0.1:8000/
