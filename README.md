@@ -30,6 +30,13 @@
 binance.com
 
 
+1.2) в файле trade_btcusdt_on_binance.py заменить набор символов своими ключами
+
+API_KEY = 'ABCDabcd123456!@#$%'
+
+API_SECRET = 'ABCDabcd123456!@#$%'
+
+
 2) установить виртуальное окружение
 
 $ virtualenv venv
