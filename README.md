@@ -69,14 +69,14 @@ http://127.0.0.1:8000/admin
 
 9) в админке создать два значения в поле Config
 
-size_pozition
+size_position
 
 percent_deviation
 
 
 10) запустить торговый скрипт
 
-файл trade_btcusdt_on_binance.py
+trade_btcusdt_on_binance.py
 
 
 11) перейти в браузер
