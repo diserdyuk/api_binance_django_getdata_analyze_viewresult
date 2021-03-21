@@ -1,0 +1,6 @@
+/venv
+__pycache__
+db.sqlite3
+README.md
+status_and_orders_btcusdt.txt
+tradeonbinance/statusorders/migrations

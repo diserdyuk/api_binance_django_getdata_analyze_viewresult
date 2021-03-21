@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="bg-light">    
+    <div class="container">
+      <main>
+        <div class="py-5 text-center">
+          <h3>Trade BTCUSDT</h3>
+          <p class="lead">If the price is 0.33% above the  moving average(MA) 9, short sell 1 btcusdt. If the price is 0.33% lower than MA 9, buy 1 btcusdt.</p>
+        </div>
+    
+        <div class="row g-3">
+          <div class="col-md-5 col-lg-4 order-md-last">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+              <span class="text-muted">Settings</span>
+            </h4>
+            <form action="/update_config" method="post">
+            <ul class="list-group mb-3">
+              <li class="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                  <label for="firstName" class="form-label">Size position</label>
+                  <input type="text" class="form-control" id="movingaverage" placeholder="" value="" required="" name="size_position">
+                  <div class="settings">
+                  </div>
+                </div>
+                <span class="text-muted">{{ size_position }}</span>
+            </li>
+              <li class="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                  <label for="firstName" class="form-label">%-deviation</label>
+                  <input type="text" class="form-control" id="deviation" placeholder="" value="" required="" name="percent_deviation">
+                  <div class="settings">
+                  </div>
+                </div>
+                <span class="text-muted">{{ percent_deviation }}</span>
+              </li>
+            </ul>
+            <button class="w-100 btn btn-primary btn-sm" type="submit">Apply</button>    
+            {% csrf_token %}
+            </form>           
+          </div>
+
+          <div class="col-md-7 col-lg-8">
+            <h4 class="mb-3">Current trade status</h4>
+            <hr class="my-1">
+            {% for order in orders %}
+                <p>{{ order.status}} / {{ order.ticker }} / {{ order.price }} / Size: {{ order.size }} / {{ order.time }}</p>
+            {% endfor %}
+            
+          </div>
+        </div>
+      </main>
+    
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">© 2021</p>
+      </footer>
+
+</body>
+</html>
