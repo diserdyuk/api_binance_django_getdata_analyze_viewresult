@@ -41,7 +41,7 @@ $ source venv/bin/activate
 
 4) установить django
 
-pip install django
+$ pip install django
 
 
 5) сделать миграции
